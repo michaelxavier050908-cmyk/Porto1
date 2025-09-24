@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael T. Xavier — Portfolio</title>
+    <meta
+      name="description"
+      content="Minimal dark-mode portfolio with neon accent. Built with vanilla HTML, CSS & JS."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="#home" class="logo">MX<span class="logo__dot">.</span></a>
+        <button
+          class="nav__toggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="#home" class="nav__link">Home</a></li>
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#projects" class="nav__link">Projects</a></li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero section" data-label="Home">
+        <div class="container hero__inner">
+          <h1 class="hero__title">
+            Hi, Namaku <span class="accent">Michael Xavier</span>
+          </h1>
+          <p class="hero__subtitle">Pelajar, UI Designer & Programmer</p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn">See Projects</a>
+            <a href="#contact" class="btn btn--outline">Contact Me</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="about section" data-label="About">
+        <div class="container">
+          <h2 class="section__title">About Me</h2>
+          <div class="about__grid">
+            <div class="about__photo">
+              <img
+                src="assets/avatar.webp"
+                alt="John Doe portrait"
+                loading="lazy"
+                width="320"
+                height="320"
+              />
+            </div>
+            <div class="about__text">
+              <p>
+                "Halo, nama saya Mike! Saya suka ngulik teknologi, bikin kode,
+                dan tentu saja mendengarkan musik. Web ini saya buat untuk
+                berbagi karya, cerita, dan perjalanan saya dalam dunia
+                pemrograman maupun kehidupan sehari-hari."
+              </p>
+              <a href="assets/cv-sample.pdf" download class="btn btn--small">
+                Download CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="projects section" data-label="Projects">
+        <div class="container">
+          <h2 class="section__title">Projects</h2>
+          <div class="projects__grid" id="projectGrid">
+            <!-- Card 1 -->
+            <article class="project-card" data-id="1">
+              <img
+                src="assets/proj1.webp"
+                alt="Project 1 thumbnail"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <div class="project-card__body">
+                <h3 class="project-card__title">Web Developer</h3>
+                <p class="project-card__desc">
+                  Create a website that is useful and helpful
+                </p>
+                <div class="project-card__tech">
+                  <span>React</span><span>Tailwind</span
+                  ><span>LocalStorage</span>
+                </div>
+                <button class="btn btn--small project-card__btn">
+                  View Detail
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="project-card" data-id="2">
+              <img
+                src="assets/proj2.webp"
+                alt="Project 2 thumbnail"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <div class="project-card__body">
+                <h3 class="project-card__title">
+                  Part of Visual & Social Media P26
+                </h3>
+                <p class="project-card__desc">
+                  Responsible for visual, social, creative, communicative.
+                </p>
+                <div class="project-card__tech">
+                  <span>Vue</span><span>SCSS</span><span>GSAP</span>
+                </div>
+                <button class="btn btn--small project-card__btn">
+                  View Detail
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="project-card" data-id="3">
+              <img
+                src="assets/proj3.webp"
+                alt="Project 3 thumbnail"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <div class="project-card__body">
+                <h3 class="project-card__title">Music Player</h3>
+                <p class="project-card__desc">
+                 create a music player that is attractive and pleasing to the eye
+                </p>
+                <div class="project-card__tech">
+                  <span>JS</span><span>API</span><span>Chart.js</span>
+                </div>
+                <button class="btn btn--small project-card__btn">
+                  View Detail
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="skills section" data-label="Skills">
+        <div class="container">
+          <h2 class="section__title">Skills</h2>
+          <div class="skills__cloud">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            <span>Gaming</span><span>Visualize</span><span>Critical</span> <span>Creative</span
+            ><span>Collaborative</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact section" data-label="Contact">
+        <div class="container">
+          <h2 class="section__title">Contact</h2>
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form__group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required minlength="2" />
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <div class="form__group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                minlength="10"
+              ></textarea>
+              <span class="form__error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+
+          <ul class="social">
+  <li>
+    <a href="https://instagram.com/michaelxavier09" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="24" height="24"><use href="#icon-ig"/></svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://x.com/xavier_mic8895" target="_blank" rel="noopener" aria-label="Twitter">
+      <svg width="24" height="24"><use href="#icon-tw"/></svg>
+    </a>
+  </li>
+</ul>
+              <a href="mailto:michaelxavier050908@gmail.com" aria-label="Email"
+                ><svg width="24" height="24"><use href="#icon-mail" /></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <small
+          >&copy; <span id="year"></span> John Doe. All rights reserved.</small
+        >
+        <nav class="footer__nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal" hidden>
+      <div class="modal__content">
+        <button class="modal__close" aria-label="Close modal">&times;</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- SVG Sprite (icons) -->
+    <svg hidden>
+      <defs>
+        <symbol id="icon-ig" viewBox="0 0 24 24">
+  <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+</symbol>
+
+<symbol id="icon-tw" viewBox="0 0 24 24">
+  <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.73-1.89-8.84-4.48-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.22-1.95-.55v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.94.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+</symbol>
+      </defs>
+    </svg>
+
+    <script src="scripts.js" defer></script>
+  </body>
+</html>
